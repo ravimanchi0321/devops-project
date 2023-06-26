@@ -19,5 +19,6 @@
     - name: REMOVE OLD IMAGES FROM SERVER
       shell: docker rmi -f $(docker images 'ravikumarmanchi/{{ JOB_NAME }}' -a -q) &> /dev/null
 
+
     - name: LOGOUT DOCKERHUB
       shell: docker logout
