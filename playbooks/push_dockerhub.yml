@@ -20,5 +20,6 @@
       shell: docker rmi -f $(docker images 'ravikumarmanchi/{{ JOB_NAME }}' -a -q) &> /dev/null
 
 
+
     - name: LOGOUT DOCKERHUB
       shell: docker logout
