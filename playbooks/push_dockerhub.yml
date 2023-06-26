@@ -16,8 +16,8 @@
         docker push ravikumarmanchi/{{ JOB_NAME }}:v1.{{ BUILD_ID }}
         docker push ravikumarmanchi/{{ JOB_NAME }}:latest
 
-    - name: REMOVE OLD IMAGES FROM SERVER
-      shell: docker rmi -f $(docker images 'ravikumarmanchi/{{ JOB_NAME }}' -a -q) &> /dev/null
+#    - name: REMOVE OLD IMAGES FROM SERVER
+ #     shell: docker rmi -f $(docker images 'ravikumarmanchi/{{ JOB_NAME }}' -a -q) &> /dev/null
 
     - name: LOGOUT DOCKERHUB
       shell: docker logout
